@@ -1,8 +1,5 @@
 public class ExtensionOKCheckNoOkException extends Exception{
-
-    public ExtensionOKCheckNoOkException(){
-    }
+    public ExtensionOKCheckNoOkException(){ }
     public ExtensionOKCheckNoOkException(String message){
-        super(message);
-    }
+        super(message); }
 }
