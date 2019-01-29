@@ -10,7 +10,14 @@ public class CheckJPG implements Checker {
 
 
 
-    public boolean check(int[] bytes) {
-        return false;
+    public boolean check(int[] bytes)
+    {
+        return checkBytesImpl.check(bytes, JPG_MAGIC);
     }
-}
+
+
+    }
+
+
+
+
