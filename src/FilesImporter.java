@@ -11,8 +11,6 @@ public class FilesImporter {
     public String readUserInput() {
         return sc.nextLine();
     }
-
-
     public int[] readFilesBytes (File userInput) throws IOException {
         int[] bytes = new int[ARRAY_SIZE];
         InputStream is = new FileInputStream(userInput);
@@ -21,7 +19,4 @@ public class FilesImporter {
         }
         return bytes;
     }
-
-
-
 }
