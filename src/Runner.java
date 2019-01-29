@@ -1,18 +1,20 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
 public class Runner {
     private FilesImporter filesImporter = new FilesImporter();
-    private Checker checkJPG;
-    private Checker checkPNG;
-    private Checker checkGIF;
+    private CheckBytes checkJPG;
+    private CheckBytes checkPNG;
+    private CheckBytes checkTYPES;
+    private CheckTYPES checker = new CheckTYPES();
+
+
 
     public Runner() {
         CheckBytesImpl checkBytesImpl = new CheckBytesImpl();
-        this.checkJPG = new CheckJPG(checkBytesImpl);
-        this.checkGIF = new CheckGIF(checkBytesImpl);
-        this.checkPNG = new CheckPNG(checkBytesImpl);
+        //this.checkJPG = new CheckJPG(checkBytesImpl);
+        this.checkTYPES = new CheckTYPES(checkBytesImpl);
+        //  this.checkPNG = new CheckPNG(checkBytesImpl);
     }
 
     void run() {
